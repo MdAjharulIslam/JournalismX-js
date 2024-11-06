@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+
+/* Universal selector to remove default padding, margin, and ensure consistent box-sizing */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Define color variables for easy theme adjustments */
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #4131ed;
+    --accent-color-dark: #1d69a3;
+    --background-color: #cfdacf; 
+}
+
+/* Body styling with background color and primary font */
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-text-color);
+    background-color: var(--background-color);
+}
+
+/* Paragraph styling with secondary font and text color */
+p {
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+/* Remove underline from links */
+a {
+    text-decoration: none;
+}
+
+/* Remove bullets from list items */
+ul {
+    list-style: none;
+}
+
+/* Flexbox helper class for easy alignment */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/* Container class for centering content and limiting width */
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+/* Navigation bar styling with fixed positioning for consistent top location */
+nav {
+    background-color: #9fce9f;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+}
+
+/* Main navigation bar spacing */
+.main-nav {
+    justify-content: space-between;
+    padding-block: 8px;
+}
+
+/* Logo size */
+.company-logo img {
+    width: 135px; 
+}
+
+/* Space between navigation links */
+.nav-links ul {
+    gap: 16px;
+}
+
+/* Link hover effect */
+.hover-link {
+    cursor: pointer;
+}
+
+.hover-link:hover {
+    color: var(--secondary-text-color);
+}
+
+/* Active nav item style */
+.nav-item.active {
+    color: var(--accent-color);
+}
+
+/* Search bar positioning */
+.search-bar {
+    position: relative;
+}
+
+/* Styling for the input field in the search bar */
+.news-input {
+    width: 300px;
+    height: 40px;
+    padding: 10px 40px 10px 20px;
+    border-radius: 20px;
+    border: 2px solid #bbd0e2;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Search button styling */
+.search-button {
+    position: absolute;
+    right: 5px; /* Position adjustment for alignment */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    background-color: var(--accent-color); /* Button color */
+    border: none;
+    cursor: pointer;
+    border-radius: 50%; /* Circular button */
+    padding: 8px;
+}
+
+/* Styling the search icon inside the button */
+.search-button .search-icon {
+    width: 20px; /* Icon dimensions */
+    height: 20px;
+    filter: invert(100%); /* Makes icon white */
+}
+
+/* Hover effect for the search button */
+.search-button:hover {
+    background-color: var(--accent-color-dark); /* Darker color on hover */
+}
+
+/* Main content padding and offset to account for fixed navigation bar */
+main {
+    padding-block: 20px;
+    margin-top: 80px;
+}
+
+/* Loading bar for progress indication */
+.loading-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #e0e0e0; /* Background for loading track */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    overflow: hidden;
+}
+
+/* Inner loading bar styling and animation */
+.loading-bar-inner {
+    height: 100%;
+    background-color: var(--accent-color); /* Color of loading progress */
+    width: 0;
+    animation: loadingAnimation 1.5s linear infinite; /* Smooth loading animation */
+}
+
+/* Loading bar animation keyframes */
+@keyframes loadingAnimation {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 50%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+/* Card container styling */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns for four cards */
+    gap: 24px; /* Slightly increased gap for a cleaner look */
+    padding: 20px;
+}
+
+/* Individual card component styling */
+.card {
+    width: 100%; /* Ensure card width fits within the grid column */
+    height: 460px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 12px; /* Rounded corners for modern look */
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Hover effect for the card */
+.card:hover {
+    transform: translateY(-8px); /* More prominent lift on hover */
+    box-shadow: 0 6px 18px rgba(0, 0,0, 0.15); /* Darker shadow on hover */
+    background-color: #f5faff; /* Light background change on hover */
+}
+
+/* Card header image styling */
+.card-header img {
+    width: 100%;
+    height: 200px; /* Adjusted image height for balanced card layout */
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Card content styling */
+.card-content {
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* News source styling */
+.news-source {
+    font-size: 14px;
+    color: var(--secondary-text-color);
+    font-weight: bold;
+    margin-block: 8px;
+}
+
+/* Card title styling */
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-text-color);
+    margin-bottom: 8px;
+}
+
+/* Card description styling */
+.card-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--secondary-text-color);
+}
