@@ -1,0 +1,37 @@
+{
+    "api": {
+        "key": "10ad0afe25714c8b96fdae2e928a94d1",
+        "baseUrl": "https://newsapi.org/v2/"
+    },
+    "pagination": {
+        "initialPage": 1,
+        "maxPages": 5,
+        "scrollLoadThreshold": 99
+    },
+    "querySettings": {
+        "defaultQuery": "bangladesh",
+        "sports": "football OR cricket",
+        "technology": "technology"
+    },
+    "ui": {
+        "loadingBarId": "loading-bar",
+        "cardsContainerId": "cards-container",
+        "newsCardTemplateId": "template-news-card",
+        "searchButtonId": "search-button",
+        "searchTextId": "search-text",
+        "resultMessages": {
+            "noArticles": "No articles found for this query.",
+            "fetchError": "Failed to fetch news. Please try again later.",
+            "defaultTitle": "No title available.",
+            "defaultDescription": "No description available."
+        }
+    },
+    "scrollBar": {
+        "innerClass": "loading-bar-inner",
+        "style": {
+            "display": "block"
+        }
+    },
+    "dateFormat": "en-US",
+    "timezone": "Asia/Dhaka"
+}
