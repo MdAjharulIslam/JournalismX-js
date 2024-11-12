@@ -47,11 +47,14 @@ ul {
 }
 
 /* Container class for centering content and limiting width */
-.container {
-    max-width: 1180px;
-    margin-inline: auto;
-    overflow: hidden;
-}
+ .cards-container {
+        width: 100vw; 
+        padding: 20px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+        gap: 24px;
+    }
 
 /* Navigation bar styling with fixed positioning for consistent top location */
 nav {
@@ -62,6 +65,9 @@ nav {
     z-index: 99;
     left: 0;
     right: 0;
+    padding-left: 20px; /* Add left margin */
+    padding-right: 20px; /* Add right margin */
+    
 }
 
 /* Main navigation bar spacing */
