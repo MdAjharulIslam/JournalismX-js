@@ -1,16 +1,16 @@
 const API_KEY = "10ad0afe25714c8b96fdae2e928a94d1"; // API key for accessing the news API
 const url = "https://newsapi.org/v2/"; // Base URL for the news API
 
-let currentPage = 1; // Initialize page counter for infinite scroll
-let currentQuery = "bangladesh"; // Default query used for the initial load
-let isLoading = false; // Boolean flag to prevent duplicate API requests
-let firstLoad = true; // Boolean flag to show loading bar and alert only on initial load
+let currentPage = 1; //<a> Initialize page counter for infinite scroll
+let currentQuery = "bangladesh"; //<j> Default query used for the initial load
+let isLoading = false; //<h> Boolean flag to prevent duplicate API requests
+let firstLoad = true; //<a> Boolean flag to show loading bar and alert only on initial load
 
-// Attach an event listener to the window load event
-window.addEventListener("load", () => fetchNews(currentQuery, currentPage)); // Fetch initial news articles when page loads
+//<r> Attach an event listener to the window load event
+window.addEventListener("load", () => fetchNews(currentQuery, currentPage)); // <U> Fetch initial news articles when page loads
 
 
-// Add this block immediately after the initial variable declarations:
+// <l> Add this block immediately after the initial variable declarations:
 window.addEventListener("load", () => {
     fetchNews(currentQuery, currentPage); // Load initial news articles on page load
     searchText.value = ""; // Clear the search input field on page load
@@ -19,12 +19,12 @@ window.addEventListener("load", () => {
 
 // Function to reload the current page
 function reload() {
-    window.location.reload(); // Refreshes the current view of the page
+    window.location.reload(); //   Refreshes the current view of the page
 }
 
 // Function to fetch news articles from the API based on a query and page
 async function fetchNews(query, page = 1) {
-    if (isLoading) return; // Exit if a request is already in progress
+    if (isLoading) return; //  <Ajharul> Exit if a request is already in progress
     isLoading = true; // Set loading flag to prevent duplicate requests
 
     const loadingBar = document.getElementById("loading-bar"); // Get the loading bar element by its ID
