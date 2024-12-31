@@ -1,4 +1,4 @@
-const API_KEY = "10ad0afe25714c8b96fdae2e928a94d1"; // API key for accessing the news API
+const API_KEY = "10ad0afe25714c8b96fdae2e928a94d"; // API key for accessing the news API
 const url = "https://newsapi.org/v2/"; // Base URL for the news API
 
 let currentPage = 1; //<a> Initialize page counter for infinite scroll
