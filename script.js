@@ -156,3 +156,5 @@ function updateLoadingBar() {
 
 // Listen for scroll events to update the loading bar
 window.addEventListener("scroll", updateLoadingBar); // Attach the scroll event listener for loading bar updates
+
+//copyright Md Ajharul Islam
