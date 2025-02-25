@@ -9,12 +9,12 @@ let firstLoad = true; //<a> Boolean flag to show loading bar and alert only on i
 //<r> Attach an event listener to the window load event
 window.addEventListener("load", () => fetchNews(currentQuery, currentPage)); // <U> Fetch initial news articles when page loads
 
-
 // <l> Add this block immediately after the initial variable declarations:
 window.addEventListener("load", () => {
     fetchNews(currentQuery, currentPage); // Load initial news articles on page load
     searchText.value = ""; // Clear the search input field on page load
 });
+
 
 
 // Function to reload the current page
