@@ -24,20 +24,7 @@ This project is a web-based application that fetches and displays news articles 
 1. A valid API key from the [News API](https://newsapi.org/).
 2. A modern web browser.
 
-## Installation and Setup
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/news-fetch-app.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd news-fetch-app
-   ```
-3. Open the `index.html` file in a browser to view the application.
-4. Replace the placeholder `API_KEY` in the script with your News API key.
-
-## How It Works
+# How It Works
 
 1. **Page Load**: On initial load, the application fetches and displays news articles based on the default query (e.g., "Bangladesh").
 2. **Search**: Users can search for news articles by entering a query in the search bar and clicking the search button.
