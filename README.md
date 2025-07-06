@@ -22,7 +22,7 @@ This project is a web-based application that fetches and displays news articles 
 ## Prerequisites
 
 1. A valid API key from the [News API](https://newsapi.org/).
-2. A modern web browser.
+2. A modern web browser!
 
 # How It Works
 
